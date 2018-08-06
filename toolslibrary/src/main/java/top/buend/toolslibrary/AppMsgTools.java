@@ -7,7 +7,7 @@ import android.content.pm.PackageManager;
  * Created by hdl
  */
 
-public class APPTools {
+public class AppMsgTools {
 
 
     /**
