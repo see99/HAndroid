@@ -2,6 +2,7 @@ package top.buend.toolslibrary;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
 import android.os.Bundle;
 
 /**
@@ -36,6 +37,14 @@ public class Tools {
             throw  new RuntimeException("in Application regist Tools");
         }
         return appInstace;
+    }
+
+    /**
+     * get ApplicationContext
+     * @return
+     */
+    public static Context getAppContext(){
+        return appInstace.getApplicationContext();
     }
 
     static class ActivityLifecycleCallbacksImpl implements Application.ActivityLifecycleCallbacks{
