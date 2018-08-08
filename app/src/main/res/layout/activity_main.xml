@@ -20,5 +20,11 @@
     android:text="NetTools"
     android:id="@+id/net_tools"
     />
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="DeviceMsgTools"
+    android:id="@+id/device_msg_tools"
+    />
 
 </LinearLayout>
