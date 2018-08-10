@@ -8,9 +8,7 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.provider.Settings;
-import android.support.annotation.RequiresApi;
 import android.support.annotation.RequiresPermission;
-import android.support.v4.app.ActivityCompat;
 import android.telephony.TelephonyManager;
 
 import static android.Manifest.permission.ACCESS_WIFI_STATE;
