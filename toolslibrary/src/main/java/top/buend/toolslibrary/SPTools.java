@@ -14,10 +14,12 @@ import java.util.Set;
  */
 
 public class SPTools {
+    public static final String CUSTOM_NAME = "customName";
     /**
      * default name packageName
      */
     private static final String dfName = Tools.getAppContext().getPackageName();
+
 
     private static String customName = null;
 
@@ -30,6 +32,7 @@ public class SPTools {
      * @param customName
      */
     public static void setCustomName(String customName) {
+        putByDf(CUSTOM_NAME,customName);
         SPTools.customName = customName;
     }
 
@@ -44,11 +47,16 @@ public class SPTools {
      */
     private static SharedPreferences getSp(){
         if(TextUtils.isEmpty(customName)){
-            throw new RuntimeException("setCustomName method must be called");
+            return getDfSp();
         }
         return Tools.getAppContext().getSharedPreferences(customName, Context.MODE_PRIVATE);
     }
     private static SharedPreferences.Editor getEditor(){
+        String fileName = getStringByDf(CUSTOM_NAME, "");
+        if (TextUtils.isEmpty(fileName)){
+            return getDfEditor();
+        }
+        SPTools.customName = fileName;
         return getSp().edit();
     }
     /**
@@ -139,7 +147,7 @@ public class SPTools {
      * @param key
      * @param value
      */
-    public static void putByDf(String key, Object value){
+    private static void putByDf(String key, Object value){
         SharedPreferences.Editor editor = getDfEditor();
         if (value instanceof String) {
             editor.putString(key, (String) value);
@@ -159,11 +167,11 @@ public class SPTools {
         editor.commit();
     }
 
-    public static String getStringByDf(String key, String df){
+    private static String getStringByDf(String key, String df){
         return getDfSp().getString(key,df);
     }
 
-    public static int getIntByDf(String key,int df){
+/*    public static int getIntByDf(String key,int df){
         return getDfSp().getInt(key,df);
     }
 
@@ -183,9 +191,9 @@ public class SPTools {
         return getDfSp().getStringSet(key,df);
     }
 
-    /**
+    *//**
      * Remove value by key
-     */
+     *//*
     public static void removeByDf(String key){
         if(TextUtils.isEmpty(key)){
             throw new RuntimeException("key error");
@@ -199,7 +207,7 @@ public class SPTools {
 
     public static Map<String,?> getAllByDf(){
         return getDfSp().getAll();
-    }
+    }*/
 
 
 }

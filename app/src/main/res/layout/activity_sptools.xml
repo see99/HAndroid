@@ -49,5 +49,24 @@
         android:layout_height="wrap_content"
         android:id="@+id/tv_value"
         />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/black"
+        />
+
+    <Button
+        android:id="@+id/bt_set_flie_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置文件名"
+        />
+
+    <EditText
+        android:id="@+id/et_flie_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="设置保存数据文件的名字,   如果没有设置则默认文件名字为包名"
+        />
 
 </LinearLayout>
