@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button appMsgTools;
     private Button netTools;
     private Button deviceMsgTools;
+    private Button sp_tools;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +22,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         appMsgTools = (Button) findViewById(R.id.app_msg_tools);
         netTools = (Button) findViewById(R.id.net_tools);
         deviceMsgTools = (Button) findViewById(R.id.device_msg_tools);
+        sp_tools = (Button) findViewById(R.id.sp_tools);
         appMsgTools.setOnClickListener(this);
         netTools.setOnClickListener(this);
         deviceMsgTools.setOnClickListener(this);
+        sp_tools.setOnClickListener(this);
     }
 
     @Override
@@ -37,6 +40,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.device_msg_tools:
                 startActivity(new Intent(this, DeviceMsgToolsActivity.class));
+                break;
+            case R.id.sp_tools:
+                startActivity(new Intent(this, SPToolsActivity.class));
                 break;
         }
     }

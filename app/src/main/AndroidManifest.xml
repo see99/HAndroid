@@ -25,7 +25,8 @@
         <activity android:name=".ToolsActivity" />
         <activity android:name=".AppMsgToolsActivity" />
         <activity android:name=".NetToolsActivity" />
-        <activity android:name=".DeviceMsgToolsActivity"></activity>
+        <activity android:name=".DeviceMsgToolsActivity" />
+        <activity android:name=".SPToolsActivity"></activity>
     </application>
 
 </manifest>

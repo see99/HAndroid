@@ -56,7 +56,7 @@ public class SPTools {
      * @param key
      * @param value
      */
-    public void put(String key, Object value){
+    public static void put(String key, Object value){
         SharedPreferences.Editor editor = getEditor();
         if (value instanceof String) {
             editor.putString(key, (String) value);
@@ -139,7 +139,7 @@ public class SPTools {
      * @param key
      * @param value
      */
-    public void putByDf(String key, Object value){
+    public static void putByDf(String key, Object value){
         SharedPreferences.Editor editor = getDfEditor();
         if (value instanceof String) {
             editor.putString(key, (String) value);
