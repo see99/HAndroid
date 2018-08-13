@@ -57,7 +57,7 @@ public class NetTools {
     }
 
     /**
-     * 判断网络是否可用 通过ping  通过这个方法很耗时
+     * 判断网络是否可用 通过ping
      *
      * @return network is available using ping
      */
