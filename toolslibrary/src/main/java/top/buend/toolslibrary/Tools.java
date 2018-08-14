@@ -5,6 +5,8 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
 
+import java.util.Stack;
+
 /**
  * Created by HDL
  * email:1066609543@qq.com hao3tian5@gmail.com
@@ -14,7 +16,7 @@ import android.os.Bundle;
 public class Tools {
 
     private static Application appInstace;
-    private static final Application.ActivityLifecycleCallbacks ACTIVITYLIFECYCLE = new ActivityLifecycleCallbacksImpl();
+    private static final ActivityLifecycleCallbacksImpl ACTIVITY_LIFECYCLE = new ActivityLifecycleCallbacksImpl();
 
     /**
      * regist Tools & init
@@ -23,9 +25,13 @@ public class Tools {
     public static void regist(Application app){
         if(appInstace == null){
             appInstace = app;
-            appInstace.registerActivityLifecycleCallbacks(ACTIVITYLIFECYCLE);
+            appInstace.registerActivityLifecycleCallbacks(ACTIVITY_LIFECYCLE);
         }
 
+    }
+
+    public static ActivityLifecycleCallbacksImpl getActivityLifecycle() {
+        return ACTIVITY_LIFECYCLE;
     }
 
     /**
@@ -47,10 +53,22 @@ public class Tools {
         return appInstace.getApplicationContext();
     }
 
-    static class ActivityLifecycleCallbacksImpl implements Application.ActivityLifecycleCallbacks{
+     static class ActivityLifecycleCallbacksImpl implements Application.ActivityLifecycleCallbacks{
+
+        private static final Stack<Activity> acStack = new Stack<>();
+
+        public  Stack<Activity> getAcStack() {
+            return acStack;
+        }
 
         @Override
         public void onActivityCreated(Activity activity, Bundle bundle) {
+                if(getCurrentActivity()!=null && getCurrentActivity().getClass().getSimpleName().equals(activity.getClass().getSimpleName())){
+                    acStack.pop();
+                    acStack.push(activity);
+                }else {
+                    acStack.push(activity);
+            }
 
         }
 
@@ -81,7 +99,18 @@ public class Tools {
 
         @Override
         public void onActivityDestroyed(Activity activity) {
+            acStack.remove(activity);
+        }
 
+        /**
+         * Current Activity
+         * @return
+         */
+        public Activity getCurrentActivity(){
+            if(acStack.empty()){
+                return null;
+            }
+            return acStack.peek();
         }
     }
 
