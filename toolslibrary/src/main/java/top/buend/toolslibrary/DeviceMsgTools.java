@@ -79,4 +79,21 @@ public class DeviceMsgTools {
         WifiInfo connectionInfo = wifiManager.getConnectionInfo();
         return connectionInfo.getMacAddress();
     }
+
+
+    /**
+     * 获取app所在系统的版本名称
+     * @return
+     */
+    public static String getSDKVersionName(){
+        return Build.VERSION.RELEASE;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public static int getSDKVersionCode(){
+        return Build.VERSION.SDK_INT;
+    }
 }

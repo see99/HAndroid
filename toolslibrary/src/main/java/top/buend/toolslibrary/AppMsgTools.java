@@ -1,7 +1,9 @@
 package top.buend.toolslibrary;
 
 import android.content.Context;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.os.Build;
 
 /**
  * Created by hdl
@@ -15,10 +17,10 @@ public class AppMsgTools {
      * @param mContext
      * @return 默认为0
      */
-    public static int getVersionCode(Context mContext){
+    public static int getVersionCode(){
         int versionCode = 0;
         try {
-            versionCode = mContext.getPackageManager().getPackageInfo(mContext.getPackageName(), 0).versionCode;
+            versionCode = Tools.getAppContext().getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
@@ -30,16 +32,24 @@ public class AppMsgTools {
      * @param mContext
      * @return 默认为空
      */
-    public static String getVersionName(Context mContext){
+    public static String getVersionName(){
         String versionName = "";
         try {
-            versionName = mContext.getPackageManager().getPackageInfo(mContext.getPackageName(),0).versionName;
+            versionName = Tools.getAppContext().getPackageManager().getPackageInfo(getPackageName(),0).versionName;
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
         return versionName;
     }
 
+
+    /**
+     * 获取应用包名
+     * @return
+     */
+   public static String getPackageName(){
+        return Tools.getAppContext().getPackageName();
+   }
 
 
 

@@ -2,6 +2,7 @@ package top.buend.toolslibrary;
 
 import android.app.Activity;
 import android.app.Application;
+import android.support.annotation.Nullable;
 
 import java.util.Stack;
 
@@ -22,6 +23,5 @@ public class ActivityTools {
             acStack.pop().finish();
         }
     }
-
 
 }
