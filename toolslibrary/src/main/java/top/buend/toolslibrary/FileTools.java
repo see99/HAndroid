@@ -9,4 +9,8 @@ package top.buend.toolslibrary;
  */
 
 public class FileTools {
+
+    public void xx(){
+        Tools.getAppContext().getFilesDir();
+    }
 }

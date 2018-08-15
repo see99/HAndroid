@@ -3,10 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidTools.iml" filepath="$PROJECT_DIR$/AndroidTools.iml" />
-      <module fileurl="file://$PROJECT_DIR$/AndroidTools.iml" filepath="$PROJECT_DIR$/AndroidTools.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/toolslibrary/toolslibrary.iml" filepath="$PROJECT_DIR$/toolslibrary/toolslibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/toolslibrary/toolslibrary.iml" filepath="$PROJECT_DIR$/toolslibrary/toolslibrary.iml" />
     </modules>
   </component>

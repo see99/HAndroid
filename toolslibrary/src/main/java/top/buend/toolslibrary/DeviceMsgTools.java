@@ -90,7 +90,7 @@ public class DeviceMsgTools {
     }
 
     /**
-     *
+     * 获取app所在系统的版本号
      * @return
      */
     public static int getSDKVersionCode(){
