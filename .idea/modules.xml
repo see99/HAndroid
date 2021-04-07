@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidTools.iml" filepath="$PROJECT_DIR$/AndroidTools.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/toolslibrary/toolslibrary.iml" filepath="$PROJECT_DIR$/toolslibrary/toolslibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HAndroid.iml" filepath="$PROJECT_DIR$/.idea/modules/HAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HAndroid.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HAndroid.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hmvvm/HAndroid.hmvvm.iml" filepath="$PROJECT_DIR$/.idea/modules/hmvvm/HAndroid.hmvvm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/toolslibrary/HAndroid.toolslibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/toolslibrary/HAndroid.toolslibrary.iml" />
     </modules>
   </component>
 </project>

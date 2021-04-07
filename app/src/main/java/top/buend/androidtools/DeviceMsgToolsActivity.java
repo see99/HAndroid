@@ -1,18 +1,14 @@
 package top.buend.androidtools;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.pm.PackageManager;
-import android.os.Build;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.telephony.TelephonyManager;
 import android.widget.TextView;
 
 import top.buend.toolslibrary.DeviceMsgTools;
-import top.buend.toolslibrary.Tools;
 
 public class DeviceMsgToolsActivity extends AppCompatActivity {
 

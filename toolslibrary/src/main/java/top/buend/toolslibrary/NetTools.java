@@ -1,6 +1,5 @@
 package top.buend.toolslibrary;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -8,7 +7,7 @@ import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
-import android.support.annotation.RequiresPermission;
+import androidx.annotation.RequiresPermission;
 
 import java.io.IOException;
 

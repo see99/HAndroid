@@ -1,14 +1,12 @@
 package top.buend.toolslibrary;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.provider.Settings;
-import android.support.annotation.RequiresPermission;
+import androidx.annotation.RequiresPermission;
 import android.telephony.TelephonyManager;
 
 import static android.Manifest.permission.ACCESS_WIFI_STATE;
