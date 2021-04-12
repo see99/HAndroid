@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="onLongClickCommand" format="reference" />
+    <attr name="onClickCommand" format="reference" />
+    <attr name="onFocusChangeCommand" format="reference" />
+
+    <declare-styleable name="view">
+        <attr name="onLongClickCommand" />
+        <attr name="onClickCommand"/>
+        <attr name="onFocusChangeCommand"/>
+    </declare-styleable>
+</resources>
