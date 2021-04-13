@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.see99.hmvvm.MyApp;
 import com.see99.hmvvm.dagger.module.AppModule;
+import com.see99.hmvvm.model.http.HttpManager;
 
 import javax.inject.Singleton;
 
@@ -17,6 +18,8 @@ public interface AppComponent {
     void inject(MyApp mApp);
 
     Application getMyApp();
+
+    HttpManager getHttpManager();
 
     @Component.Builder
     interface Builder{

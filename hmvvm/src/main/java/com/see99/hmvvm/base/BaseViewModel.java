@@ -5,7 +5,10 @@ import android.os.Bundle;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.see99.hmvvm.model.http.HttpManager;
+
 public class BaseViewModel extends ViewModel {
+    protected HttpManager httpManager;
     //需要几个动态LiveData对象
 
     /**

@@ -3,12 +3,19 @@ package com.see99.hmvvm.dagger.module;
 import android.app.Application;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProvider;
 
+
+import com.see99.hmvvm.Supplier;
+import com.see99.hmvvm.ViewModelProviderFactory;
 import com.see99.hmvvm.base.BaseActivity;
+import com.see99.hmvvm.model.http.HttpManager;
 import com.see99.hmvvm.ui.login.LoginViewModel;
 
-import java.util.function.Supplier;
+
+
 
 import dagger.Module;
 import dagger.Provides;
@@ -17,12 +24,11 @@ import dagger.Provides;
 public class ActivityModule {
 
     @Provides
-    LoginViewModel providesLoginViewModel(BaseActivity<?,?> activity, Application application){
-
-//        Supplier<LoginViewModel> supplier = () -> new LoginViewModel(dataManager, schedulerProvider);
-//        ViewModelProviderFactory<LoginViewModel> factory = new ViewModelProviderFactory<>(LoginViewModel.class, supplier);
-//        return new ViewModelProvider(activity, factory).get(LoginViewModel.class);
-        return new ViewModelProvider(activity,ViewModelProvider.AndroidViewModelFactory.getInstance(application)).get(LoginViewModel.class);
+    LoginViewModel providesLoginViewModel(HttpManager httpManager, BaseActivity<?,?> activity, Application application){
+        Supplier<LoginViewModel> supplier = () -> new LoginViewModel(httpManager);
+        ViewModelProviderFactory<LoginViewModel> factory = new ViewModelProviderFactory(LoginViewModel.class, supplier);
+        return new ViewModelProvider(activity, factory).get(LoginViewModel.class);
+//        return new ViewModelProvider(activity,ViewModelProvider.AndroidViewModelFactory.getInstance(application)).get(LoginViewModel.class);
     }
 
     @Provides

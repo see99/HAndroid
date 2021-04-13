@@ -13,5 +13,6 @@ public interface ApiService {
 
     //登录接口
     @POST("sa/login")
+//    Observable<HashMap<String,Object>> login(@Body HashMap<String, String> map );
     Observable<HashMap<String,Object>> login(@Body HashMap<String, String> map );
 }

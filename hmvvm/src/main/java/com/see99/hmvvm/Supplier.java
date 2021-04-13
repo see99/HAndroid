@@ -1,5 +1,11 @@
 package com.see99.hmvvm;
 
-public abstract class Supplier<T> {
-    abstract T get();
+public interface Supplier<T> {
+
+    /**
+     * Gets a result.
+     *
+     * @return a result
+     */
+    T get();
 }
