@@ -43,8 +43,10 @@ public class LoginViewModel extends BaseViewModel {
     });
 
     public LoginViewModel(HttpManager httpManager) {
-        this.httpManager = httpManager;
+        super(httpManager);
     }
+
+
 
     public void swichShowPassword(){
         isShowPassword.setValue(isShowPassword.getValue()==null||!isShowPassword.getValue());
@@ -62,41 +64,8 @@ public class LoginViewModel extends BaseViewModel {
     }
 
     public void login(String userName, String password) {
-        HashMap<String,String> hashMap = new HashMap<>();
-        hashMap.put("userName",userName);
-        hashMap.put("pwd",userName);
-        hashMap.put("type","android_app");
-        httpManager.baseService().login(hashMap)
-                .subscribeOn(Schedulers.io())
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .observeOn(Schedulers.io())
-                .subscribe(new Observer<HashMap<String,Object>>() {
-                    @Override
-                    public void onSubscribe(@NonNull Disposable d) {
-                        Log.i("TAG", "onSubscribe: "+Thread.currentThread().getName());
-                    }
 
-                    @Override
-                    public void onNext(@NonNull HashMap<String,Object> s) {
-                        Log.i("TAG", "onNext: 返回的数据："+s);
-                        Log.i("Thread",Thread.currentThread().getName());
-                        //设置跳转的参数
-//                        setRouterForActivity(1,null);
-
-                    }
-
-                    @Override
-                    public void onError(@NonNull Throwable e) {
-                        Log.i("TAG", "onError: "+e.getMessage()+Thread.currentThread().getName());
-                    }
-
-                    @Override
-                    public void onComplete() {
-                        Log.i("TAG", "onComplete: "+Thread.currentThread().getName());
-                    }
-                });
-
-
+        setRouterForActivity(1,null);
 
     }
 }

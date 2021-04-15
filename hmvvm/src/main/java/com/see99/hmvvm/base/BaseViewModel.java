@@ -17,8 +17,8 @@ public class BaseViewModel extends ViewModel {
      */
     MutableLiveData<Router> routers = new MutableLiveData<>();
 
-    public BaseViewModel(){
-
+    public BaseViewModel(HttpManager httpManager){
+        this.httpManager = httpManager;
     }
 
     /**

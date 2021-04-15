@@ -17,6 +17,8 @@ import com.see99.hmvvm.base.BaseActivity;
 import com.see99.hmvvm.dagger.component.ActivityComponent;
 import com.see99.hmvvm.databinding.ActivityLoginBinding;
 
+import top.buend.toolslibrary.StatusBarTools;
+
 public class LoginActivity extends BaseActivity<ActivityLoginBinding,LoginViewModel> implements View.OnClickListener {
 
 //    @Inject
@@ -40,6 +42,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding,LoginViewMo
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        StatusBarTools.transparencyBar(this);
         initObserver();
         initClick();
     }

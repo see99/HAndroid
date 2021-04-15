@@ -4,6 +4,7 @@ import com.see99.hmvvm.base.BaseActivity;
 import com.see99.hmvvm.dagger.module.ActivityModule;
 import com.see99.hmvvm.dagger.scope.ActivityScope;
 import com.see99.hmvvm.ui.login.LoginActivity;
+import com.see99.hmvvm.ui.main.MainActivity;
 
 import dagger.BindsInstance;
 import dagger.Component;
@@ -16,6 +17,8 @@ public interface ActivityComponent {
 //    void inject(MainActivity activity);
 
     void inject(LoginActivity loginActivity);
+
+    void inject(MainActivity mainActivity);
 
 //    @Component.Builder
 //    interface Builderx{
