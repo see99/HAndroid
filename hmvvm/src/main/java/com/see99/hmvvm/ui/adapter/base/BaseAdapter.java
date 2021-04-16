@@ -14,24 +14,21 @@ import com.see99.hmvvm.base.BaseViewModel;
 import com.see99.hmvvm.ui.adapter.MyAdapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class BaseAdapter<T,V extends ViewDataBinding> extends RecyclerView.Adapter<BaseViewHoder<V>> {
 
-    private ArrayList<T> items;
-
+    protected ArrayList<T> items;
     public BaseAdapter(){
          items = new ArrayList<>();
     }
-
     public ArrayList<T> getItems() {
         return items;
     }
-
-    public void setItems(ArrayList<T> items) {
-//        this.items = items;
-        items.clear();
+    public void setItems(List<T> items) {
         if (items!=null){
-            items.addAll(items);
+            this.items.clear();
+            this.items.addAll(items);
         }
         notifyDataSetChanged();
     }

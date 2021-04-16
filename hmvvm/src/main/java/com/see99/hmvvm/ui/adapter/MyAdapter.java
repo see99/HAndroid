@@ -22,22 +22,24 @@ import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHoder> {
 
-//    private List<MyTest> list;
-MutableLiveData<List<MyTest>> list;
+    private List<MyTest> list;
+//MutableLiveData<List<MyTest>> list;
     private Context context;
     public MyAdapter(Context mContext){
-      list = new MutableLiveData<>();
-      list.setValue(new ArrayList<>());
-//        list = new ArrayList<>();
+//      list = new MutableLiveData<>();
+//      list.setValue(new ArrayList<>());
+        list = new ArrayList<>();
         this.context = mContext;
     }
 
     public void setList(List<MyTest> list){
         if (list!=null){
-            this.list.getValue().clear();
-            this.list.getValue().addAll(list);
+            this.list.clear();
+            this.list.addAll(list);
 
         }
+
+        notifyDataSetChanged();
 
     }
 
@@ -54,14 +56,14 @@ MutableLiveData<List<MyTest>> list;
 
     @Override
     public void onBindViewHolder(@NonNull ViewHoder holder, int position) {
-        MyTest myTest = list.getValue().get(position);
+        MyTest myTest = list.get(position);
         holder.binding.setItem(myTest);
 //        holder.binding.tv.setText(myTest.getName());
     }
 
     @Override
     public int getItemCount() {
-        return list.getValue().size();
+        return list.size();
     }
 
     class ViewHoder extends RecyclerView.ViewHolder{

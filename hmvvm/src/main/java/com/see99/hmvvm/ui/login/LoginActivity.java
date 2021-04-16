@@ -42,7 +42,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding,LoginViewMo
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StatusBarTools.transparencyBar(this);
+//        StatusBarTools.transparencyBar(this);
         initObserver();
         initClick();
     }

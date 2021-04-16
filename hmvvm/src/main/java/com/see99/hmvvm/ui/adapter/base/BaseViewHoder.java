@@ -10,5 +10,6 @@ public class BaseViewHoder<T extends ViewDataBinding> extends RecyclerView.ViewH
     public T binding;
     public BaseViewHoder(@NonNull T binding) {
         super(binding.getRoot());
+        this.binding = binding;
     }
 }
