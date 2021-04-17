@@ -2,6 +2,7 @@ package top.buend.toolslibrary;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Build;
 import android.view.View;
@@ -65,6 +66,16 @@ public class StatusBarTools {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             activity.getWindow().getDecorView().setSystemUiVisibility( View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN| View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
+    }
+
+    /**
+     * 获取状态栏高度
+     * @return
+     */
+    public static int getStatusBarHeight() {
+        Resources resources = Tools.getAppContext().getResources();
+        int resourceId = resources.getIdentifier("status_bar_height", "dimen", "android");
+        return resources.getDimensionPixelSize(resourceId);
     }
 
 }

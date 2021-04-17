@@ -18,7 +18,7 @@ import static android.content.Context.WIFI_SERVICE;
 /**
  * Created by HDL
  * email:1066609543@qq.com hao3tian5@gmail.com
- * github:buend
+ * github:see99
  */
 
 public class NetTools {
