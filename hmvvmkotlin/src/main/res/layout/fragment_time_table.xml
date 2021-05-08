@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.see99.hmvvmkotlin.ui.timetable.TimeTableViewModel" />
+    </data>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/time_table_bg"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="13dp"
+        >
+        <TextView
+            android:layout_width="56dp"
+            android:layout_height="17dp"
+            android:text="石家庄"
+            android:gravity="center"
+            android:textColor="#ff707070"
+            android:textSize="13sp"
+            android:background="@drawable/time_table_are_bg"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:text="全部校区"
+            android:textColor="#ff707070"
+            android:textSize="13sp"
+            android:layout_marginLeft="13dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/jiantou_down"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="395dp"
+        android:layout_height="132dp"
+        android:layout_marginTop="13dp"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="49dp"
+        android:paddingRight="49dp"
+        android:layout_marginTop="20dp"
+        >
+        <TextView
+            android:layout_width="73dp"
+            android:layout_height="30dp"
+            android:text="2021年"
+            android:textColor="#ff303030"
+            android:textSize="22sp"
+            />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/month_left"
+                />
+            <TextView
+                android:layout_width="52dp"
+                android:layout_height="27dp"
+                android:gravity="center"
+                android:text="1月"
+                android:textColor="#ff707070"
+                android:textSize="18sp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/month_right"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+</layout>

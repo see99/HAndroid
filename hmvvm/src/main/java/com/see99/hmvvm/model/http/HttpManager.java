@@ -35,7 +35,6 @@ public class HttpManager {
                 .addInterceptor(logInterceptor)
                 //添加header 拦截器
                 .addInterceptor(new HeaderInterceptor())
-
                 .build();
 
         apiService = new Retrofit.Builder()

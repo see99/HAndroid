@@ -32,6 +32,7 @@ public abstract class BaseActivity<T extends ViewDataBinding, V extends BaseView
         super.onCreate(savedInstanceState);
         performDataBinding();
         initBaseObserver();
+
     }
 
     private void initBaseObserver() {

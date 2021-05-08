@@ -9,4 +9,9 @@ ext {
             versionCode      : 1,
             versionName      : "1.0",
     ]
+
+    versions = [
+            hiltCoreVersion      : '2.34.1-beta',
+            hiltVersion          : '1.0.0-beta01',
+    ]
 }

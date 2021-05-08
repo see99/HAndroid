@@ -5,7 +5,7 @@ import android.app.Application;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import top.buend.toolslibrary.Tools;
+
 
 /**
  * Created by HDL
@@ -18,6 +18,6 @@ public class AppApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Tools.regist(this);
+
     }
 }

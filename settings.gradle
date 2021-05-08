@@ -1,2 +1,3 @@
+include ':hmvvmkotlin'
 include ':hmvvm'
-include ':app', ':toolslibrary'
+include ':app'

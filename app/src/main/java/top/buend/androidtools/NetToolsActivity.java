@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import top.buend.toolslibrary.NetTools;
+//import top.buend.toolslibrary.NetTools;
 
 public class NetToolsActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -26,38 +26,38 @@ public class NetToolsActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void initData() {
-        if(NetTools.isNetConnected()){
-            if(NetTools.isAvailable()){
-                netState.setText("网络已连接  可用");
-            }else {
-                netState.setText("网络已连接  不可用");
-            }
-
-        }else {
-            netState.setText("网络已断开");
-        }
-
-        String netTypeConnection = "";
-
-        if(NetTools.isWifiConnection()){
-            netTypeConnection+="Wifi 已连接";
-        }else {
-            netTypeConnection+="Wifi 未连接";
-        }
-
-        if(NetTools.isGPRSConnection()){
-            netTypeConnection+="  移动网络 已连接";
-        }else {
-            netTypeConnection+="  移动网络 未连接";
-        }
-        netType.setText(netTypeConnection);
+//        if(NetTools.isNetConnected()){
+//            if(NetTools.isAvailable()){
+//                netState.setText("网络已连接  可用");
+//            }else {
+//                netState.setText("网络已连接  不可用");
+//            }
+//
+//        }else {
+//            netState.setText("网络已断开");
+//        }
+//
+//        String netTypeConnection = "";
+//
+//        if(NetTools.isWifiConnection()){
+//            netTypeConnection+="Wifi 已连接";
+//        }else {
+//            netTypeConnection+="Wifi 未连接";
+//        }
+//
+//        if(NetTools.isGPRSConnection()){
+//            netTypeConnection+="  移动网络 已连接";
+//        }else {
+//            netTypeConnection+="  移动网络 未连接";
+//        }
+//        netType.setText(netTypeConnection);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.bt_open_network_setting:
-                NetTools.openNetworkSettion();
+//                NetTools.openNetworkSettion();
                 break;
         }
     }

@@ -48,7 +48,6 @@ dependencies {
 
     //dagger
     implementation 'com.google.dagger:dagger:2.33'
-    implementation project(path: ':toolslibrary')
     annotationProcessor 'com.google.dagger:dagger-compiler:2.24'
     annotationProcessor 'com.google.dagger:dagger-android-processor:2.24'
 
@@ -66,4 +65,6 @@ dependencies {
 
     //okhttp3
     implementation 'com.squareup.okhttp3:logging-interceptor:3.12.1'
+
+    implementation 'com.github.see99:HUtils:1.0.8'
 }

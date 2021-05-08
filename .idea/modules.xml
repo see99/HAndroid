@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/HAndroid.iml" filepath="$PROJECT_DIR$/.idea/modules/HAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HAndroid.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HAndroid.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/hmvvm/HAndroid.hmvvm.iml" filepath="$PROJECT_DIR$/.idea/modules/hmvvm/HAndroid.hmvvm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/toolslibrary/HAndroid.toolslibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/toolslibrary/HAndroid.toolslibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hmvvmkotlin/HAndroid.hmvvmkotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/hmvvmkotlin/HAndroid.hmvvmkotlin.iml" />
     </modules>
   </component>
 </project>

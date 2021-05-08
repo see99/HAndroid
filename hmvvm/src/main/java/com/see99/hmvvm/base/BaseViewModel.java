@@ -29,4 +29,6 @@ public class BaseViewModel extends ViewModel {
     public void setRouterForActivity(int routerId,Bundle bundle){
          routers.postValue(new Router(routerId,bundle));
     }
+
+
 }
